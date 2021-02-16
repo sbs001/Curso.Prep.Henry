@@ -1,0 +1,125 @@
+
+
+Variables:
+        Una variable es un "contenedor" donde el desarrollador puede(o no) almacenar
+        algun dato. Se acceder a ese dato mencionando el nombre de la variable.
+        El valor que se almacena en una variable puede variar, tal como dice su nombre.
+
+            EJ: Si necesito guardar algun dato sobre una persona, como por ejemplo su edad
+                puedo definir una variable que se llame 'edad' y en ella almacenar el dato.
+
+                        var edadDeJuan = 15; -----> si quiero saber la edad de juan solo tengo
+                                                    que mencionar el nombre de la variable
+
+                Si Juan se equivocó o cumplió años, simplemente modifico el valor almacenado
+                y puedo seguir utilizando la varible con el valor actualizado
+
+                        var edadDeJuan = 15;
+                        edadDeJuan = 15 + 1;
+                Ahora cuando use la variable edadDeJuan, voy a utilizar el numero 16.
+
+        En javaScript dentro de una variable puedo almacenar cualquier dato, sin importar
+        su tipo y estos datos pueden ser reemplazados por otros de cualquier tipo. En otros
+        lenguajes como Java o C(entre otros) cada variable solo puede almacenar datos
+        pertenecientes al tipo para las cuales de las define.
+
+            EJ: En JavaScript puedo almacenar la edad de Juan como numero o en palabras dentro de la misma 
+            variable
+                        var edadDeJuan = 15;
+                        edadDeJuan = 'quince';
+Strings:
+        Un String es un tipo de dato. Se llama string a las cadenas de caracteres.
+        Se los representa con ''. 
+            
+            EJ: var unString = 'esta cadena es un string';
+
+Funciones (argumentos, return):
+        Las funciones son porciones de codigo que hacen algo. Se utilizan para modularizar,
+        no repetir codigo, etc.
+        
+            EJ: Puedo tener una funcion que imprima por pantalla un nombre
+                
+                    function imprimirNombre(){
+                        console.log('Juan');
+                     }
+                Cuuando necesite que se imprima por pantalla el nombre simpletemente invoco
+                la funcion y evito escribir "console.log('juan')".
+
+        Los argumentos son valores que las funciones reciben y que luego pueden(o no) usarlos
+
+            EJ: Si necesito imprimir por pantalla un nombre que no sea Juan, la funcion 
+            imprimirNombre() no me serviria, salvo que la funcion pueda recibir un argumento
+            con el nombre deseado y lo utilice.
+
+                    function imprimirNombre(unNombre){
+                        console.log(unNombre);
+                    }
+            Ahora cuando quiero imprimir un nombre simplemente llamo la funcion y le paso el
+            argumento con el nombre que deseo que imprima.
+
+                    imprimirNombre('juan');
+                    
+                    var nombre = 'Carlos');
+                    imprimirNombre(nombre);
+                    .... 
+            el programa primero va a imprimir Juan y luego Carlos.
+
+            El argumento 'Juan' que la funcion recibió lo guardó en una variable llamada
+            unNombre. De esta manera puedo poner el nombre que yo desee y la funcion lo va a 
+            imprimir sin importar cual sea, porque el agumento que recibe lo guarda en su
+            variable (unNombre) e imprime el contenido de la variable.
+
+        Return hace referencia al retorno. Lo que la funcion devuelve. Una Funcion puede
+        hacer algo y luego devolver algun valor.
+        La funcion imprimirNombre() que hicimos, en sus dos versiones, imprime por pantalla,
+        pero no devuelve nada porque no necesita hacerlo, no tiene ningun sentido.
+        Pero puedo tener una funcion que sume dos numeros. Necesito que la funcion retorne
+        un valor, el resultado de la suma. No tendria sentido que solo sume y el resultado quede 
+        en el aire.
+
+                EJ: Una funcion que recibe dos numero y retorna el resultado de la suma
+                
+                    function sumar(unNumero, otroNumero){
+                        return (unNumero + otroNumero);
+                    }       
+
+                La función se invocaría así:
+                    
+                    var resultadoDeLaSuma = sumar(1,2);
+                    ...
+
+                Como la función devuelve un valor, este debo guardarlo en una variable,
+                sino, lo perderia. La variable resultadoDeLaSuma guarda el valor 3 (1 +2).
+
+Declaraciones if:
+        Los if se usan cuando hay bifurcaciones. Cuando necesito que el programa haga algo
+        segun alguna condicion. Si(if) pasa algo en especial, hacer una cosa, sino, hacer otra
+
+                EJ: Tengo dos numero. Si el primeor es mayor, quiero que los sume, sino,
+                si el segundo es mayor, quiero que los muliplique
+
+                    var unNumero = 3;
+                    var otroNumero = 5;
+                    var resultado;
+
+                    if (unNumero > otroNumero){
+                        resultado = sumar(unNumero,otroNumero);
+                    }else{
+                        resultado = muliplicar(unNumero,otroNumero);
+                    }
+                    ...
+
+Valores booleanos (true, false):
+        Un booleano es un valor que define por verdadero o falso. Estos se pueden usar para
+        operaciones logicas o como resultados de las mismas.
+
+            EJ:     var notaDeExamen = 10;
+                    var examenAprobado = (notaDeExamen > 7);  
+                    // la variable examenAprobado contiene un booleano (true)
+                    
+                    if (examenAprobado){ // (examenAprobado igual a verdadero)
+
+                        console.log('Felicidades. Bienvenido a Henry !!');
+                    }
+                    ...
+
