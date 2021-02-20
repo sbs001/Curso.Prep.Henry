@@ -9,7 +9,7 @@ function crearGato(nombre, edad) {
     return ( gato = {
       nombre : nombre,
       edad : edad,
-      meow : function(){ return ('Meow!');}
+      meow : function(){ return ('Meow!')}
   })
 }
 
